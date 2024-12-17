@@ -1,0 +1,162 @@
+Server Management for Microservices Architecture
+Directory Creation & Organization:
+
+    Create a directory named "microservices_architecture".
+    Inside "microservices_architecture", create 12 subdirectories, each named after a microservice (e.g., "user_service", "order_service", "inventory_service", etc.).
+    Inside each microservice directory, create files representing configurations or components (e.g., "docker_config.txt", "api_endpoints.txt") related to that microservice.
+
+Move and Rename Files:
+
+    Move a file (e.g., "docker_config.txt") from one microservice directory to another.
+    Rename a file within a directory (e.g., rename "api_endpoints.txt" to "api_doc.txt") and verify the change by listing the contents of the directory.
+
+Navigation & Listing Files:
+
+    Navigate to the "microservices_architecture" directory.
+    List the contents of the directory and verify the presence of all subdirectories (representing individual microservices) and files created in the previous task.
+
+File Permissions Management:
+
+    Create a file named "config.txt" in the "microservices_architecture" directory.
+    Change the permissions of the file so that only the user has read, write, and execute permissions.
+    Verify the permission changes by listing the file's details.
+
+Backup Files:
+
+    Create a backup of a file (e.g., "config.txt") by copying it to another directory (e.g., "backup").
+    Verify the copy operation by listing the contents of the backup directory.
+
+Removing Files & Directories:
+
+    Delete one of the files in the "microservices_architecture" directory (e.g., delete "docker_config.txt").
+    Remove an empty subdirectory from one of the microservice directories (e.g., remove the "inventory_service" directory if it's empty).
+
+Creating a Script for File Generation:
+
+    Write a script that creates 100 files inside the "microservices_architecture" directory, with each file representing a different microservice component (e.g., "component_1.txt", "component_2.txt", etc.).
+
+Exploring File History:
+
+    View the command history to see the last 20 commands executed.
+    Search the history for any command related to file manipulation or microservices architecture activities.
+
+System Monitoring:
+
+    Check the system's uptime to ensure the Microservices Architecture Server is running continuously.
+    View the system's load and resource usage statistics to monitor the performance of microservices deployment and management.
+
+Checking File Ownership and Permissions:
+
+    Check the ownership and group of the "config.txt" file and verify whether they are correct for the microservices architecture context.
+
+Ping Test & Network Verification:
+
+    Verify network connectivity by pinging a remote server (e.g., a container registry or a cloud instance running one of your microservices).
+    Record the response times and verify the connectivity between the microservices.
+
+Search for Specific Files or Content:
+
+    Search for a specific file within the "microservices_architecture" directory by its name (e.g., search for "docker_config.txt").
+    Search for a specific string of text (e.g., "api_endpoint") inside one of the files in the directory.
+
+Create a Directory for Each User:
+
+    Create a directory for each microservices developer in the system and assign appropriate permissions to manage their respective services.
+
+Creating a Script for Directory Cleanup:
+
+    Write a script that deletes all empty subdirectories from the "microservices_architecture" directory to clean up after old or removed services.
+
+File Sorting & Management:
+
+    Sort files in a directory by size and then list the files based on their size, helping to organize configuration files or logs by their size.
+    Create a report listing the largest and smallest files in a directory to better manage resource-heavy files.
+
+File Type Identification:
+
+    Identify and list files of a specific type (e.g., .yaml, .json, .txt) used for microservices configuration, logs, or documentation in the "microservices_architecture" directory.
+
+File Compression and Archive:
+
+    Compress a directory (e.g., "user_service") into a single archive file to create a backup of microservice configurations and resources.
+    Verify the contents of the archive without extracting it to ensure it contains all the necessary files.
+
+COMMANDS :
+Server Management for Microservices Architecture
+Directory Creation & Organization:
+	 mkdir microservices_architecture && cd microservices_architecture/
+	 mkdir microservices_architectureuser_service order_service inventory_service customer_service payment_service tax_service seller_service delivery_service storage_service help_service return_service digital_service
+	 cd ./customer_service/ && touch Customer_{1..3}.txt
+	 cd ../delivery_service/ && touch Delivery_{1..3}.txt && ls
+	 cd ../digital_service/ && touch Digital_{1..3}.txt && ls
+	 cd ../help_service/ && touch Help_{1..3}.txt && ls
+	 cd ../inventory_service/ && touch Inventory_{1..3}.txt && ls
+	 cd ../order_service/ && touch Order_{1..3}.txt && ls
+	 cd ../payment_service/ && touch  Payment_{1..3}.txt && ls
+         cd ../return_service/ && touch Return_{1..3}.txt && ls
+	 cd ../seller_service/ && touch Seller_{1..3}.txt && ls
+	 cd ../storage_service/ && touch Storage_{1..3}.txt && ls
+	 cd ../tax_service/ && touch Tax_{1..3}.txt && ls
+	 cd ../user_service/ && touch User_{1..3}.txt && ls
+Move and Rename Files:
+	 mv User_3.txt ../customer_service/
+	 cd ..
+	 cd customer_service/
+	 ls
+	 mv User_3.txt Customer_4.txt
+	 Navigation & Listing Files:
+	 cd ../microservices_architecture
+	 tree
+File Permissions Management:
+	 touch config.txt
+	 chmod 700 config.txt 
+	 ls -all
+Backup Files:
+	 mkdir Backup
+	 cp config.txt ./Backup/
+	 cd Backup/
+	 ls
+	 Removing Files & Directories:
+         cd ..
+         cd user_service/
+	 ls
+	 rm User_1.txt 
+	 ls
+	 rm User_2.txt 
+	 ls
+	 cd ..
+	 rmdir user_service/
+Creating a Script for File Generation:
+	 touch File_gntr.sh
+	 nano File_gntr.sh
+	 touch Component_{1..100}.txt
+	 chmod 700 File_gntr.sh 
+	 ./File_gntr.sh
+Exploring File History:
+	 history | tail -20
+	 history | grep -e rm -e cp -e mv -e touch
+System Monitoring:
+ 	 uptime
+ 	 ps aux
+Ping Test & Network Verification:
+ 	 ping google.com
+  	 ps
+Search for Specific Files or Content:
+	 find /home/administrator/MOHAMED_WASIM.R/Cloud_Computing_Essentials/microservices_architecture -name "Google.txt"
+	 grep "13.9" Google.txt
+Create a Directory for Each User:
+	 mkdir User
+	 cd User
+	 mkdir user_customer user_delivery user_digital user_help user_inventory user_order user_payment user_return user_seller user_storage user_tax
+Creating a Script for Directory Cleanup:
+	 nano Delete_empty.sh
+	 #!/bin/bash
+         find /home/administrator/MOHAMED_WASIM.R/Cloud_Computing_Essentials/microservices_architecture -type d -empty -delete
+         ./Delete_empty.sh
+File Sorting & Management:
+ 	 ls -lhs
+File Compression and Archive:
+	 tar -czvf customer_service_backup.tar.gz customer_service
+         tar -tzvf customer_service_backup.tar.gz 
+
+
